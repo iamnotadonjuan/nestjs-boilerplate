@@ -1,13 +1,7 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import { Field, ObjectType } from '@nestjs/graphql';
 
-
-export type UserDocument = User & Document;
-
-@Schema()
-export class User extends Document {
-  @Prop({ required: true })
+@ObjectType()
+export class User {
+  @Field(type => String)
   username: string;
 }
-
-export const UserSchema = SchemaFactory.createForClass(User);

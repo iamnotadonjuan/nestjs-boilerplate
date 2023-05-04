@@ -1,9 +1,10 @@
-import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
+import { Module } from '@nestjs/common'
+import { MongooseModule } from '@nestjs/mongoose'
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost:27017/mydatabase'),
+    MongooseModule.forRoot('mongodb://127.0.0.1:27017/pokemon_database'),
   ],
 })
+
 export class DatabaseModule {}
