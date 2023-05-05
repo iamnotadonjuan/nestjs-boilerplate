@@ -1,3 +1,5 @@
+import { TUser } from 'src/common/types/user.types';
+
 export interface IUserRepository {
-  getUsername(): Promise<string>;
+  getUser(fields: string[]): Promise<Partial<TUser>>;
 }
